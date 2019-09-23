@@ -4,16 +4,16 @@
     - dev
 ---
 server:
-                     port: 5001
-                     spring:
-                       profiles:
-                         active: dev
-                       application:
-                         name: microservice-config-client-dev
-                     eureka:
-                       client:
-                         service-url:
-                           defaultZone: http://eureka8001:8001/eureka/,http://eureka8002:8002/eureka/,http://eureka8003:8003/eureka/
+  port: 5001
+spring:
+  profiles:
+    active: dev
+  application:
+    name: microservice-config-client-dev
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka8001:8001/eureka/,http://eureka8002:8002/eureka/,http://eureka8003:8003/eureka/
 ---
 server:
   port: 5002
