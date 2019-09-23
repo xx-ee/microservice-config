@@ -1,17 +1,15 @@
 ﻿spring:
   profiles:
-    active: 
+    active:
     - dev
-
 ---
 spring:
-    profiles: dev 
+  profiles: dev         #开发环境
+  application: microservice-config-dev
+---
+spring:
+     profiles: test      #测试环境
      application:
-       name: microservice-config-dev
----
-spring:
-  profiles: test
-  application:
-    name: microservice-config-test
+       name: microservice-config-test
 
 #保存为utf-8格式
