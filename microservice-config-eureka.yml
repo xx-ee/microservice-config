@@ -9,7 +9,7 @@ server:
   port: 8001  #注册中心占用8001端口，冒号后边必须由空格
 
 spring:
-  profiles: test
+  profiles: dev
   application:
     name: microservice-config-eureka
 
