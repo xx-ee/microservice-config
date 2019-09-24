@@ -1,11 +1,13 @@
 ﻿spring:
   profiles:
-    active: dev
-    
+    active: 
+    - dev
+
 ---
 
 server:
   port: 9001
+  
 spring:
   profiles: dev
   application:
@@ -37,6 +39,7 @@ spring:
     filters: stat,wall,slf4j
     # 通过connectProperties属性来打开mergeSql功能；慢SQL记录
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+
 eureka:
   client:
     service-url:
@@ -70,11 +73,12 @@ pageHelper:
   reasonable: true
   returnPageInfo: check
   supportMethodsArguments: true
-  
+
 ---
 
 server:
   port: 9001
+  
 spring:
   profiles: test
   application:
@@ -106,6 +110,7 @@ spring:
     filters: stat,wall,slf4j
     # 通过connectProperties属性来打开mergeSql功能；慢SQL记录
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+    
 eureka:
   client:
     service-url:
