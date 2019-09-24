@@ -6,20 +6,20 @@
 ---
 
 server:
-  port: 8001
+  port:  8001
 spring:
-  profiles: dev
+  profiles:  dev
   application:
-    name: microservice-config-eureka
+    name:  microservice-config-eureka
 
 eureka:
   instance:
-    hostname: eureka8001
+    hostname:  eureka8001
   client:
-    register-with-eureka: false
-    fetch-registry: false
+    register-with-eureka:  false
+    fetch-registry:  false
     service-url:
-      defaultZone: http://eureka8001:8001/eureka/
+      defaultZone:  http://eureka8001:8001/eureka/
 
 ---
 
