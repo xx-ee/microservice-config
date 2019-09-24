@@ -1,40 +1,39 @@
 ﻿spring:
   profiles:
-    active:
-    - dev
+    active: dev
 
 ---
-
-server:
-  port:  8001
+#开发环境配置
 spring:
-  profiles:  dev
+  profiles: dev
   application:
-    name:  microservice-config-eureka-dev
-
-eureka:
-  instance:
-    hostname:  eureka8001
-  client:
-    register-with-eureka:  false
-    fetch-registry:  false
-    service-url:
-      defaultZone:  http://eureka8001:8001/eureka/
-
----
+    name: microservice-config-eureka
 
 server:
   port: 8001
-spring:
-  profiles: test
-  application:
-    name: microservice-config-eureka-test
 
 eureka:
   instance:
     hostname: eureka8001
   client:
-    register-with-eureka: false
     fetch-registry: false
+    register-with-eureka: false
     service-url:
       defaultZone: http://eureka8001:8001/eureka/
+
+---
+#测试环境
+spring:
+  profiles: test
+  application:
+    name: microservice-config-client
+eureka:
+  instance:
+    hostname: eureka8001
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://eureka8001:8001/eureka/
+server:
+  port: 8001
