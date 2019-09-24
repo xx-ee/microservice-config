@@ -2,16 +2,14 @@
   profiles:
     active:
     - dev
-
 ---
-
-server:
-  port: 8001
-
 spring:
   profiles: dev
   application:
     name: microservice-config-client
+
+server:
+  port: 8001
 
 eureka:
   instance:
@@ -23,14 +21,13 @@ eureka:
       defaultZone: http://eureka8001:8001/eureka/
 
 ---
-
-server:
-  port: 8001
-
 spring:
   profiles: test
   application:
     name: microservice-config-client
+
+server:
+  port: 8001
 
 eureka:
   instance:
