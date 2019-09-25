@@ -9,7 +9,7 @@ spring:
     name: microservice-config-client
 
 server:
-  port: 8001
+  port: 8011
 
 eureka:
   instance:
@@ -27,7 +27,7 @@ spring:
     name: microservice-config-client
 
 server:
-  port: 8011
+  port: 8001
 
 eureka:
   instance:
