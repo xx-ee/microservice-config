@@ -23,7 +23,7 @@ server:
 spring:
   profiles: test
   application:
-    name: microservice-config-client
+    name: microservice-config-client-modify
 eureka:
   client:
     service-url:
