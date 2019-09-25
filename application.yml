@@ -2,11 +2,21 @@
   profiles:
     active:
     - dev
+
 ---
+
+server:
+  port: 5555
+
 spring:
   profiles: dev         #开发环境
   application: microservice-config-dev
+
 ---
+
+server:
+  port: 6666
+
 spring:
      profiles: test      #测试环境
      application:
